@@ -49,7 +49,7 @@ SLEEP_TIMER = 60
 # initializing the last updated timer
 JSON_LAST_CHANGED = 0
 
-VER = "0.2"
+VER = "0.2.1"
 USER_AGENT = f"flightrecorder.py/{VER}"
 
 # Setup logger
