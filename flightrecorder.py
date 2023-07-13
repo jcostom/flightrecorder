@@ -49,18 +49,15 @@ SLEEP_TIMER = 60
 # initializing the last updated timer
 JSON_LAST_CHANGED = 0
 
-VER = "0.2.1"
+VER = "0.3"
 USER_AGENT = f"flightrecorder.py/{VER}"
 
 # Setup logger
+LOG_LEVEL = 'INFO'
+logging.basicConfig(level=LOG_LEVEL,
+                    format='[%(levelname)s] %(asctime)s %(message)s',
+                    datefmt='[%d %b %Y %H:%M:%S %Z]')
 logger = logging.getLogger()
-ch = logging.StreamHandler()
-logger.setLevel(logging.INFO)
-ch.setLevel(logging.INFO)
-formatter = logging.Formatter('[%(levelname)s] %(asctime)s %(message)s',
-                              datefmt='[%d %b %Y %H:%M:%S %Z]')
-ch.setFormatter(formatter)
-logger.addHandler(ch)
 
 
 def is_find_my_dead() -> bool:
